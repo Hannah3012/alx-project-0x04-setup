@@ -9,6 +9,7 @@ export const CountContext = createContext<CountContextProps | undefined>(
   undefined
 );
 
+
 export const CountProvider = ({ children }: { children: ReactNode }) => {
   const [count, setCount] = useState<number>(0);
   const increment = () => setCount((count) => count + 1);
@@ -20,6 +21,7 @@ export const CountProvider = ({ children }: { children: ReactNode }) => {
     </CountContext.Provider>
   );
 };
+
 
 export const useCount = () => {
   const context = useContext(CountContext);
