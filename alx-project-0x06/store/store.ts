@@ -7,7 +7,6 @@ const counterSlice = createSlice({
     value: 0,
   },
 
-
   reducers: {
     increment: (state) => {
       state.value += 1;
@@ -19,8 +18,6 @@ const counterSlice = createSlice({
   },
 });
 
-
-
 const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
@@ -30,10 +27,8 @@ const store = configureStore({
 
 export const { increment, decrement } = counterSlice.actions;
 
-
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 
