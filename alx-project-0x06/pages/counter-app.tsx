@@ -11,8 +11,6 @@ const CounterApp: React.FC = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch: AppDispatch = useAppDispatch();
 
-
-
   return (
     <div className="min-h-screen bg-gradient-to-r from-yellow-400 to-pink-500 flex flex-col justify-center items-center text-white">
       {/*Title */}
@@ -25,12 +23,10 @@ const CounterApp: React.FC = () => {
           : count % 10 === 0 && count !== 0
           ? "🔥 You're on fire!"
           : ""}
-
       </p>
 
       {/* Counter Display */}
       <div className="text-6xl font-bold mb-8">{count}</div>
-
 
       {/* Buttons */}
       <div className="flex space-x-4">
@@ -45,8 +41,6 @@ const CounterApp: React.FC = () => {
           className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg transform hover:scale-105"
         >
           Decrement 👎
-
-
         </button>
       </div>
       {/* Footer message */}
@@ -54,7 +48,6 @@ const CounterApp: React.FC = () => {
         Keep clicking, who knows what happens at 100? 😏
       </p>
     </div>
-    
   );
 };
 
